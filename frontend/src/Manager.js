@@ -6,14 +6,14 @@ export default function Manager() {
   const [requests, setRequests] = useState([]);
 
   const fetchRequests = async () => {
-    const res = await axios.get('https://<YOUR_BACKEND_URL>/api/requests');
+    const res = await axios.get('https://team-vacation-backend.onrender.com/api/requests');
     setRequests(res.data);
   };
 
   useEffect(() => { fetchRequests(); }, []);
 
   const updateStatus = async (id, status) => {
-    await axios.post(`https://<YOUR_BACKEND_URL>/api/request/${id}/status`, { status });
+    await axios.post(`https://team-vacation-backend.onrender.com/api/request/${id}/status`, { status });
     fetchRequests();
   };
 
@@ -36,3 +36,4 @@ export default function Manager() {
     </div>
   );
 }
+
