@@ -10,7 +10,7 @@ export default function TeamCalendar() {
   useEffect(() => { fetchRequests(); }, []);
 
   const fetchRequests = async () => {
-    const res = await axios.get('https://<YOUR_BACKEND_URL>/api/requests');
+    const res = await axios.get('https://team-vacation-frontend.onrender.com/api/requests');
     const approved = res.data.filter(r => r.status === 'Approved');
     setRequests(approved);
 
@@ -41,3 +41,4 @@ export default function TeamCalendar() {
     </div>
   );
 }
+
