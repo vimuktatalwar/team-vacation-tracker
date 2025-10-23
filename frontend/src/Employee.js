@@ -10,7 +10,7 @@ export default function Employee() {
 
   const handleSubmit = async () => {
     try {
-      await axios.post('https://<YOUR_BACKEND_URL>/api/request', { name, startDate, endDate, reason });
+      await axios.post('https://team-vacation-backend.onrender.com/api/request', { name, startDate, endDate, reason });
       setMessage('Vacation request submitted!');
       setName(''); setStartDate(''); setEndDate(''); setReason('');
     } catch (err) {
@@ -30,3 +30,4 @@ export default function Employee() {
     </div>
   );
 }
+
