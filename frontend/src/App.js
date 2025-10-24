@@ -10,6 +10,7 @@ function App() {
         <h1 className="text-3xl font-bold mb-4">Team Vacation Tracker</h1>
         <nav className="mb-6">
           <Link className="mr-4 text-blue-500" to="/employee">Employee</Link>
+    <div style="padding: 20px;">...</div>
           <Link className="text-blue-500" to="/manager">Manager</Link>
         </nav>
         <Routes>
